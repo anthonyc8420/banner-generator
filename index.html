@@ -10,31 +10,31 @@
   
   
     $(function(){
-      
+      //hides the banner once page is loaded
       $('#background-color').hide(.0001);
       
-      
+      //button to create the banner
       $('button').click(function(){
-
-        var name = $('#name').val();
+//all the information collected from the user
+        var name = $('#name').val(); 
         var age = $('#age').val();
         var food = $('#food').val();
         var color = $('#color').val();
         
         $('#background-color').css('background-color', color)
-          
+          //sentence for the banner, activates after button is clicked. 
         var sentence = "Hi! My name is " +
                    name + ". I am " + 
                    age + " years old and my favorite food is " + food + "!";
-                  
+             //the banner fades in after the generate my banner button is clicked     
         $('#background-color').fadeIn(6000);         
           
-         // $('p').html(sentence);
+         // changes the color of the text
         $('#background-color').html(sentence);
-          
+         //user selects color for the background 
         var userColor = $("#color1").val();
         $("#background-color").css("background-color", userColor);
-        
+        //user selects color for text
           var userColor2 = $("#fontColor").val();
           $("#background-color").css("color", userColor2);
       });
